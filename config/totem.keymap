@@ -11,9 +11,7 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define NAV  1
@@ -42,7 +40,7 @@
         combo_tvp {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
-            bindings = <&tog 5>;
+            bindings = <&tog 0>;
         };
     };
 
@@ -85,10 +83,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y    &kp U        &kp I        &kp O       &kp P
-                &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G          &kp H    &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI BSLH
-&kp LEFT_SHIFT  &kp Z       &kp X       &kp C        &kp V        &kp B          &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RA(RC(RIGHT_SHIFT))
-                                        &lt 1 DEL    &lt 1 TAB    &lt 2 SPACE    &kp RET  &lt 3 ESC    &kp BSPC
+                &kp Q       &kp W       &kp E         &kp R        &kp T          &kp Y      &kp U            &kp I        &kp O       &kp P
+                &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G          &kp H      &mt RSHFT J      &mt RCTRL K  &mt RALT L  &mt RGUI BSLH
+&kp LEFT_SHIFT  &kp Z       &kp X       &kp C         &kp V        &kp B          &kp N      &kp M            &kp COMMA    &kp DOT     &kp FSLH       &kp RA(RC(RIGHT_SHIFT))
+                                        &lt 3 ESCAPE  &lt 1 TAB    &lt 2 SPACE    &lt 5 DEL  &lt 4 BACKSPACE  &lt 6 ENTER
             >;
         };
 
@@ -118,82 +116,50 @@
 
         Mouse {
             bindings = <
-       &sys_reset  &none     &none      &none      &none    &trans  &trans  &trans  &trans  &trans
-       &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHFT  &none    &trans  &trans  &trans  &trans  &trans
-&none  &none       &kp LALT  &none      &none      &none    &trans  &trans  &trans  &trans  &trans  &trans
-                             &none      &none      &none    &trans  &trans  &trans
+       &sys_reset  &none     &none      &none      &none    &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO
+       &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none       &none        &none       &none      &none
+&none  &none       &kp LALT  &none      &none      &none    &none       &none        &none       &none      &none       &none
+                             &none      &none      &none    &none       &none        &none
+            >;
+
+            label = "MOUSE";
+        };
+
+        Media {
+            bindings = <
+       &sys_reset  &none     &none      &none      &none    &none       &none              &none            &none       &none
+       &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none
+&none  &none       &kp LALT  &none      &none      &none    &none       &none              &none            &none       &none  &none
+                             &none      &none      &none    &kp C_STOP  &kp C_PLAY         &kp K_MUTE
             >;
         };
 
-        sim_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        Numbers {
+            bindings = <
+       &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &none      &none      &none     &sys_reset
+       &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none  &none      &none      &kp LALT  &none       &none
+                          &kp DOT  &kp N0  &kp EQUAL    &none  &none      &none
+            >;
+        };
+
+        Simbol {
+            bindings = <
+           &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)     &none  &none      &none      &none     &none
+           &kp LS(COLON)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)     &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&kp LSHFT  &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)     &none  &none      &none      &kp LALT  &none     &kp LS(LC(LALT))
+                                        &kp LS(LPAR)   &kp LS(RPAR)   &kp LS(UNDER)    &none  &none      &none
+            >;
 
             label = "SYM";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo 4        &trans        &kp C_PP        &trans
-            >;
         };
 
-        adjust_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "ADJ";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
+        Functions {
             bindings = <
-        &sys_reset   &bt BT_CLR  &out OUT_TOG  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &bootloader  &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans       &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                 &trans        &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        tvp1_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "TVP 1";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃ NEXT FILE ┃ MARK IN   ┃ ROTATE    ┃ MARK OUT  ┃ SHOW SNAP ┃   ┃           ┃           ┃           ┃           ┃           ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ TVP II    ┃ LEFT      ┃ PAN       ┃ RIGHT     ┃ PLAY/FLIP ┃   ┃           ┃           ┃           ┃           ┃           ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃ FULLSCR   ┃ SHIFT     ┃ COPY      ┃ DELETE    ┃ PASTE     ┃ IMG MARK  ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃ UNDO/SAVE ┃  SEL/MOV  ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-       &kp TAB    &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt 0 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
-&kp J  &kp LSHFT  &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
-                             &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
+       &kp F12  &kp F7  &kp F8  &kp F9     &none      &none  &none      &none      &none     &none
+       &kp F11  &kp F4  &kp F5  &kp F6     &none      &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &kp F10  &kp F1  &kp F2  &kp F3     &none      &none  &none      &none      &kp LALT  &none     &none
+                        &none   &kp SPACE  &kp TAB    &none  &none      &none
             >;
         };
     };
