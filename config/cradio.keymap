@@ -25,10 +25,28 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y      &kp U       &kp I      &kp O      &kp P
-&kp A  &kp S  &kp A  &kp D      &kp G        &kp H      &KP LSHFT   &KP LALT   &KP LCTRL  &KP LGUI
-&kp Z  &kp X  &kp C  &kp V      &kp B        &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH
-                     &lt 2 TAB  &kp ENTER    &kp SPACE  &lt 1 BSPC
+&kp Q  &kp W  &kp E  &kp R    &kp T        &kp Y    &kp U    &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F    &kp G        &kp H    &kp J    &kp K      &kp L    &kp BSPC
+&kp Z  &kp X  &kp C  &kp V    &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH
+                     &kp DEL  &kp SPACE    &kp RET  &kp TAB
+            >;
+        };
+
+        Colemak-DH {
+            bindings = <
+&kp Q  &kp W  &kp F  &kp P   &kp B     &kp J   &kp L   &kp U      &kp Y    &kp SEMI
+&kp A  &kp R  &kp S  &kp T   &kp G     &kp K   &kp N   &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C  &kp D   &kp V     &kp M   &kp H   &kp COMMA  &kp DOT  &kp FSLH
+                     &trans  &trans    &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&kp Q  &kp W  &kp E  &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp BSPC
+&kp Z  &kp X  &kp C  &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH
+                     &trans  &trans    &trans  &trans
             >;
         };
 
@@ -56,15 +74,6 @@
 &bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
 &trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
                              &trans      &trans          &trans  &trans
-            >;
-        };
-
-        Colemak-DH {
-            bindings = <
-&kp Q  &kp W  &kp F  &kp P  &kp B        &kp J  &kp L    &kp U      &kp Y    &kp SEMI
-&kp A  &kp R  &kp S  &kp T  &kp G        &kp K  &kp N    &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C  &kp D  &kp V        &kp M  &kp H    &kp COMMA  &kp DOT  &kp FSLH
-                     &mo 2  &kp SPACE    &mo 1  &kp TAB
             >;
         };
     };
