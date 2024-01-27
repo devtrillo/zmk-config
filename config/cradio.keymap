@@ -23,7 +23,17 @@
     combos {
         compatible = "zmk,combos";
 
-        left_sqrt {
+double_quote {
+			bindings = <&kp QUOTE>;
+			key-positions = <3 13>;
+			layers = <0>;
+		};
+		sinlg_quote {
+			bindings = <&kp QUOTE>;
+			key-positions = <2 12>;
+			layers = <1>;
+		};
+        l_sqrt {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <0 10>;
             layers = <0>;
