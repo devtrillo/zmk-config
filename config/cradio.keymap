@@ -88,48 +88,56 @@
             key-positions = <10 20>;
             layers = <0 2>;
         };
-        greater_than{
+
+        greater_than {
             bindings = <&kp GREATER_THAN>;
             key-positions = <11 21>;
             layers = <0 2>;
         };
-        grave{
+
+        grave {
             bindings = <&kp GRAVE>;
             key-positions = <12 22>;
             layers = <0 2>;
         };
-        
-        tilde{
+
+        tilde {
             bindings = <&kp TILDE>;
             key-positions = <13 23>;
             layers = <0 2>;
         };
-        backslash{
+
+        backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <14 24>;
             layers = <0 2>;
         };
+
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <15 25>;
             layers = <0 2>;
         };
-        underscore{
+
+        underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <16 26>;
             layers = <0 2>;
         };
-        plus{
+
+        plus {
             bindings = <&kp PLUS>;
             key-positions = <17 27>;
             layers = <0 2>;
         };
-        left_brace{
+
+        left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <18 28>;
             layers = <0 2>;
         };
-        right_brace{
+
+        right_brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <19 29>;
             layers = <0 2>;
@@ -150,10 +158,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W  &kp E  &kp R    &kp T        &kp Y    &kp U    &kp I      &kp O    &kp P
-&mt LEFT_GUI A  &mt LALT S  &mt RCTRL D  &mt LSHIFT F    &kp G        &kp H    &kp J    &kp K      &kp L    &kp BSPC
-&kp Z           &kp X  &kp C  &kp V    &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH
-                              &kp DEL  &kp SPACE    &kp RET  &kp TAB
+&kp Q           &kp W       &kp E        &kp R         &kp T        &kp Y    &kp U        &kp I      &kp O    &kp P
+&mt LEFT_GUI A  &mt LALT S  &mt RCTRL D  &mt LSHIFT F  &kp G        &kp H    &mt RSHFT J  &kp K      &kp L    &kp BSPC
+&kp Z           &kp X       &kp C        &kp V         &kp B        &kp N    &kp M        &kp COMMA  &kp DOT  &kp FSLH
+                                         &kp DEL       &kp SPACE    &kp RET  &kp TAB
             >;
         };
 
