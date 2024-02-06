@@ -34,15 +34,45 @@
             key-positions = <1 11>;
             layers = <0 2>;
         };
-
+         double_quotes {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <2 12>;
+            layers = <0 2>;
+        };
+        single_quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <3 13>;
+            layers = <0 2>;
+        };
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <4 14>;
+            layers = <0 2>;
+        }
         colon {
             bindings = <&kp COLON>;
             key-positions = <5 15>;
+            layers = <0 2>;
         };
-
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <6 16>;
+            layers = <0 2>;
+        };
+        equal {
+            bindings = <&kp PLUS>;
+            key-positions = <7 17>;
+            layers = <0 2>;
+        };
+        left_parentesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <8 18>;
+            layers = <0 2>;
+        };
         right_parentesis {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <9 19>;
+            layers = <0 2>;
         };
     };
 
