@@ -158,10 +158,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W       &kp E        &kp R         &kp T        &kp Y    &kp U        &kp I      &kp O    &kp P
-&mt LEFT_GUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G        &kp H    &mt RSHFT J  &mt RCTRL K      &mt RALT L    &mt RGUI BSPC
-&kp Z           &kp X       &kp C        &kp V         &kp B        &kp N    &kp M        &kp COMMA  &kp DOT  &kp FSLH
-                                         &kp DEL       &kp SPACE    &kp RET  &kp TAB
+&kp Q           &kp W       &kp E        &kp R         &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
+&mt LEFT_GUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G        &kp H    &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI BSPC
+&kp Z           &kp X       &kp C        &kp V         &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH
+                                         &mo 4         &kp SPACE    &kp RET  &mo 4
             >;
         };
 
@@ -176,10 +176,10 @@
 
         Colemak-DH {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P   &kp B     &kp J   &kp L   &kp U      &kp Y    &kp SEMI
-&mt LEFT_GUI A  &mt LALT R  &mt LCTRL S  &mt LSHIFT T   &kp G     &kp K   &mt RSHFT N   &mt RCTRL E      &mt RALT I    &mt RGUI O
-&kp Z  &kp X  &kp C  &kp D   &kp V     &kp M   &kp H   &kp COMMA  &kp DOT  &kp FSLH
-                     &trans  &trans    &trans  &trans
+&kp Q           &kp W       &kp F        &kp P         &kp B     &kp J   &kp L        &kp U        &kp Y       &kp SEMI
+&mt LEFT_GUI A  &mt LALT R  &mt LCTRL S  &mt LSHIFT T  &kp G     &kp K   &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
+&kp Z           &kp X       &kp C        &kp D         &kp V     &kp M   &kp H        &kp COMMA    &kp DOT     &kp FSLH
+                                         &trans        &trans    &trans  &trans
             >;
         };
 
@@ -208,6 +208,15 @@
 &trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
                              &trans      &trans          &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        settings {
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 };
