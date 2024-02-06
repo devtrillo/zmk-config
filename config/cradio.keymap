@@ -23,28 +23,19 @@
     combos {
         compatible = "zmk,combos";
 
-        quote {
-            bindings = <&kp SQT>;
-            key-positions = <3 13>;
-            layers = <0>;
-        };
-
-        double_quote {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <2 12>;
-            layers = <1>;
-        };
-
-        l_sqrt {
+        left_bracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <0 10>;
-            layers = <0>;
+            layers = <0 2>;
         };
+    };
 
-        r_sqrt {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <1 11>;
-            layers = <0>;
+    macros {
+        PS: PS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N2 &kp N5 &kp N0 &kp N1 &kp N2 &kp N5 &kp LS(E) &kp S &kp T &kp E &kp B &kp A &kp N>;
+            label = "PS";
         };
     };
 
@@ -53,10 +44,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R    &kp T        &kp Y    &kp U    &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F    &kp G        &kp H    &kp J    &kp K      &kp L    &kp BSPC
-&kp Z  &kp X  &kp C  &kp V    &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH
-                     &kp DEL  &kp SPACE    &kp RET  &kp TAB
+&kp Q           &kp W  &kp E  &kp R    &kp T        &kp Y    &kp U    &kp I      &kp O    &kp P
+&mt LEFT_GUI A  &kp S  &kp D  &kp F    &kp G        &kp H    &kp J    &kp K      &kp L    &kp BSPC
+&kp Z           &kp X  &kp C  &kp V    &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH
+                              &kp DEL  &kp SPACE    &kp RET  &kp TAB
             >;
         };
 
@@ -98,7 +89,7 @@
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &PS     &trans  &trans  &trans  &sys_reset
 &bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
 &trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
                              &trans      &trans          &trans  &trans
