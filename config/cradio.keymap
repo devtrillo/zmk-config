@@ -38,11 +38,25 @@
         colon {
             bindings = <&kp COLON>;
             key-positions = <5 15>;
+            layers = <2 0>;
         };
 
         right_parentesis {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <9 19>;
+            layers = <0 2>;
+        };
+
+        double_quotes {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <2 12>;
+            layers = <0 2>;
+        };
+
+        single_quote {
+            bindings = <&kp SQT>;
+            key-positions = <3 13>;
+            layers = <0 2>;
         };
     };
 
