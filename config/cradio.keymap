@@ -6,6 +6,10 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Home row mods macro
+&mt {
+  flavor = "tap-preferred";
+  tapping_term_ms = <285>;
+ };
 
 / {
     behaviors {
