@@ -6,10 +6,11 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Home row mods macro
+
 &mt {
-  flavor = "tap-preferred";
-  tapping_term_ms = <285>;
- };
+    flavor = "tap-preferred";
+    tapping_term_ms = <285>;
+};
 
 / {
     behaviors {
@@ -162,55 +163,55 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W       &kp E        &kp R         &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
-&mt LEFT_GUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G        &kp H    &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI BSPC
-&kp Z           &kp X       &kp C        &kp V         &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH
-                                         &mo 4         &kp SPACE    &kp RET  &mo 4
+&kp Q           &kp W       &kp E        &kp R                         &kp T  &kp Y  &kp U                              &kp I        &kp O       &kp P
+&mt LEFT_GUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F                  &kp G  &kp H  &mt RSHFT J                        &mt RCTRL K  &mt RALT L  &mt RGUI BSPC
+&kp Z           &kp X       &kp C        &kp V                         &kp B  &kp N  &kp M                              &kp COMMA    &kp DOT     &kp FSLH
+                                         &mt LC(LA(LEFT_SHIFT)) SPACE  &mo 4  &mo 3  &mt RA(RC(RG(RIGHT_SHIFT))) ENTER
             >;
         };
 
         QWERTY_NO_MODS {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp BSPC
-&kp Z  &kp X  &kp C  &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH
-                     &trans  &trans    &trans  &trans
+&kp Q  &kp W  &kp E  &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F   &kp G   &kp H   &kp J   &kp K      &kp L    &kp BSPC
+&kp Z  &kp X  &kp C  &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH
+                     &trans  &trans  &trans  &trans
             >;
         };
 
         Colemak-DH {
             bindings = <
-&kp Q           &kp W       &kp F        &kp P         &kp B     &kp J   &kp L        &kp U        &kp Y       &kp SEMI
-&mt LEFT_GUI A  &mt LALT R  &mt LCTRL S  &mt LSHIFT T  &kp G     &kp K   &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp Z           &kp X       &kp C        &kp D         &kp V     &kp M   &kp H        &kp COMMA    &kp DOT     &kp FSLH
-                                         &trans        &trans    &trans  &trans
+&kp Q           &kp W       &kp F        &kp P         &kp B   &kp J   &kp L        &kp U        &kp Y       &kp SEMI
+&mt LEFT_GUI A  &mt LALT R  &mt LCTRL S  &mt LSHIFT T  &kp G   &kp K   &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
+&kp Z           &kp X       &kp C        &kp D         &kp V   &kp M   &kp H        &kp COMMA    &kp DOT     &kp FSLH
+                                         &trans        &trans  &trans  &trans
             >;
         };
 
         right_layer {
             bindings = <
-&kp INS     &kp N1  &kp N2  &kp N3  &trans     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END   &kp COLON
-&kp DEL     &kp N4  &kp N5  &kp N6  &trans     &kp LARW  &kp DARW   &kp UARW   &kp RARW  &kp SEMI
-&caps_word  &kp N7  &kp N8  &kp N9  &kp N0     &trans    &trans     &trans     &trans    &trans
-                            &trans  &kp ESC    &trans    &trans
+&kp EXCL  &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPS  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp N1    &kp N2  &kp N3     &kp N4      &kp N5       &kp N6     &kp N7    &kp N8     &kp N9                &kp N0
+&none     &none   &none      &none       &none        &none      &none     &none      &none                 &none
+                             &trans      &mo 5        &trans     &trans
             >;
         };
 
         left_layer {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
-                              &trans    &trans       &trans     &trans
+&trans  &trans    &kp UP    &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans     &trans  &mo 5   &trans
             >;
         };
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &PS     &trans  &trans  &trans  &sys_reset
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                             &trans      &trans          &trans  &trans
+&sys_reset   &none  &none  &none       &bt BT_SEL 0  &PS    &none  &none  &none  &sys_reset
+&bootloader  &none  &none  &none       &bt BT_SEL 1  &none  &none  &none  &none  &bootloader
+&none        &none  &none  &bt BT_CLR  &bt BT_SEL 2  &none  &none  &none  &none  &none
+                           &none       &none         &none  &none
             >;
         };
     };
@@ -219,7 +220,7 @@
         compatible = "zmk,conditional-layers";
 
         settings {
-            if-layers = <3 4>;
+            if-layers = <3 5>;
             then-layer = <5>;
         };
     };
