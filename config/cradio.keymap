@@ -153,7 +153,7 @@
         PS: PS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N2 &kp N5 &kp N0 &kp N1 &kp N2 &kp N5 &kp LS(E) &kp S &kp T &kp E &kp B &kp A &kp N>;
+            bindings = <&kp N2 &kp N5 &kp N0 &kp N1 &kp N2 &kp N5 &kp LS(E) &kp S &kp T &kp E &kp B &kp A &kp N &kp EXCLAMATION>;
             label = "PS";
         };
     };
@@ -209,7 +209,7 @@
         tri_layer {
             bindings = <
 &sys_reset   &none  &none  &none       &bt BT_SEL 0  &PS    &none  &none  &none  &sys_reset
-&bootloader  &none  &none  &none       &bt BT_SEL 1  &none  &none  &none  &none  &bootloader
+&bootloader  &none  &none  &none       &bt BT_SEL 1  &none  &to 2  &to 1  &none  &bootloader
 &none        &none  &none  &bt BT_CLR  &bt BT_SEL 2  &none  &none  &none  &none  &none
                            &none       &none         &none  &none
             >;
