@@ -147,6 +147,16 @@
             key-positions = <19 29>;
             layers = <0 2>;
         };
+
+        SYS {
+            bindings = <&mo 5>;
+            key-positions = <30 31>;
+        };
+
+        SYS_2 {
+            bindings = <&mo 5>;
+            key-positions = <33 32>;
+        };
     };
 
     macros {
@@ -216,17 +226,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        settings {
-            if-layers = <3 4>;
-            then-layer = <5>;
-        };
-
-        Settings_2 {
-            if-layers = <4 3>;
-            then-layer = <5>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
