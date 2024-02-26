@@ -21,10 +21,8 @@
 #define TVP2 5
 
 &mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
+    quick-tap-ms = <285>;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
 };
 
 / {
@@ -83,10 +81,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q       &kp W       &kp E         &kp R        &kp T          &kp Y      &kp U            &kp I        &kp O       &kp P
-                &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G          &kp H      &mt RSHFT J      &mt RCTRL K  &mt RALT L  &mt RGUI BSLH
-&kp LEFT_SHIFT  &kp Z       &kp X       &kp C         &kp V        &kp B          &kp N      &kp M            &kp COMMA    &kp DOT     &kp FSLH       &kp RA(RC(RIGHT_SHIFT))
-                                        &lt 3 ESCAPE  &lt 1 TAB    &lt 2 SPACE    &lt 5 DEL  &lt 4 BACKSPACE  &lt 6 ENTER
+                            &kp Q       &kp W       &kp E         &kp R        &kp T        &kp Y        &kp U            &kp I        &kp O       &kp P
+                            &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G        &kp H        &mt RSHFT J      &mt RCTRL K  &mt RALT L  &mt RGUI BSLH
+&kp LA(LC(LG(LEFT_SHIFT)))  &kp Z       &kp X       &kp C         &kp V        &kp B        &kp N        &kp M            &kp COMMA    &kp DOT     &kp FSLH       &kp RA(RC(RIGHT_SHIFT))
+                                                    &lt 3 ESCAPE  &lt 1 SPACE  &lt 2 TAB    &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DEL
             >;
         };
 
