@@ -3,7 +3,7 @@
   "name": "totem",
   "url": "https://github.com/GEIGEIGEIST/TOTEM",
   "layouts": {
-    "LAYOUT": {
+    "totem": {
       "layout": [
         { "row": 0, "col":  1, "x":  0.776, "y": 1.519, "w": 1.059, "r": -10, "rx":  1.305, "ry": 2.019 },
         { "row": 0, "col":  2, "x":  1.964, "y": 0.605, "w": 1.059, "r":  -4, "rx":  2.494, "ry": 1.105 },
