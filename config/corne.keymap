@@ -35,7 +35,7 @@
             bindings = <
   &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans  &trans  &trans
-  &kp LALT  &kp LALT  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &kp LALT  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
                       &trans     &trans     &trans    &trans  &trans
             >;
         };
@@ -44,7 +44,7 @@
             bindings = <
   &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans  &trans  &trans
-  &kp LALT  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+  &trans &kp LALT      &trans     &trans     &trans    &trans  &trans  &trans  &trans  
                       &trans     &trans     &trans    &trans  &trans
             >;
         };
@@ -52,8 +52,8 @@
         Numbers {
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
-  &trans  &trans  &trans  &trans  &trans    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
+  &trans  &trans  &trans  &trans  &trans &trans    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  
+  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &kp RALT    &trans
                   &trans  &trans  &trans    &trans     &trans
             >;
         };
@@ -61,8 +61,8 @@
         Symbols {
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
-  &trans  &trans  &trans  &trans  &trans    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
+  &trans  &trans  &trans  &trans  &trans  &trans   &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  
+  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &kp RALT   &trans
                   &trans  &trans  &trans    &trans     &trans
             >;
         };
@@ -70,8 +70,8 @@
         Fn {
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
-  &trans  &trans  &trans  &trans  &trans    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
+  &trans  &trans  &trans  &trans  &trans &trans    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  
+  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans      &kp RALT  &trans
                   &trans  &trans  &trans    &trans     &trans
             >;
         };
