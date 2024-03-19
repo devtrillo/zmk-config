@@ -44,7 +44,7 @@
             bindings = <
   &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans &kp LALT      &trans     &trans     &trans    &trans  &trans  &trans  &trans  
+  &trans &kp LALT      &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  
                       &trans     &trans     &trans    &trans  &trans  &trans
             >;
         };
