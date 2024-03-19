@@ -2,12 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
-
 
 &mt {
     flavor = "tap-preferred";
@@ -27,12 +22,32 @@
         };
     };
 
-       macros {
+    macros {
         PS: PS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N2 &kp N5 &kp N0 &kp N1 &kp N2 &kp N5 &kp LS(E) &kp S &kp T &kp E &kp B &kp A &kp N &kp AT>;
             label = "PS";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&lt 2 TAB>;
+            key-positions = <30 31>;
+        };
+
+        delete {
+            bindings = <&lt 2 DELETE>;
+            key-positions = <32 33>;
+        };
+
+        dot {
+            bindings = <&kp DOT>;
+            key-positions = <32 33>;
+            layers = <5>;
         };
     };
 
@@ -44,52 +59,52 @@
 &kp Q           &kp W       &kp E        &kp R                         &kp T      &kp Y            &kp U                              &kp I        &kp O       &kp P
 &mt LEFT_GUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F                  &kp G      &kp H            &mt RSHFT J                        &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
 &kp Z           &kp X       &kp C        &kp V                         &kp B      &kp N            &kp M                              &kp COMMA    &kp DOT     &kp FSLH
-                                         &mt LC(LA(LEFT_SHIFT)) SPACE  &lt 4 TAB  &lt 3 BACKSPACE  &mt RA(RC(RG(RIGHT_SHIFT))) ENTER
-            >;
-        };
-
-        QWERTY_NO_MODS {
-            bindings = <
-&kp Q  &kp W  &kp E  &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F   &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI
-&kp Z  &kp X  &kp C  &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH
-                     &trans  &trans  &trans  &trans
+                                         &mt LC(LA(LEFT_SHIFT)) SPACE  &lt 0 TAB  &lt 0 BACKSPACE  &mt RA(RC(RG(RIGHT_SHIFT))) ENTER
             >;
         };
 
         Colemak-DH {
             bindings = <
-&kp Q           &kp W       &kp F        &kp P         &kp B   &kp J   &kp L        &kp U        &kp Y       &kp SEMI
-&mt LEFT_GUI A  &mt LALT R  &mt LCTRL S  &mt LSHIFT T  &kp G   &kp K   &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp Z           &kp X       &kp C        &kp D         &kp V   &kp M   &kp H        &kp COMMA    &kp DOT     &kp FSLH
-                                         &trans        &trans  &trans  &trans
+&kp Q           &kp W           &kp F        &kp P         &kp B   &kp J   &kp L        &kp U        &kp Y       &kp SEMI
+&mt LEFT_GUI A  &mt LALT R      &mt LCTRL S  &mt LSHIFT T  &kp G   &kp K   &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
+&kp Z           &mt LEFT_ALT X  &kp C        &kp D         &kp V   &kp M   &kp H        &kp COMMA    &kp DOT     &kp FSLH
+                                             &trans        &trans  &trans  &trans
             >;
         };
 
-        right_layer {
+        Nav {
             bindings = <
-&kp EXCL  &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPS  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp N1    &kp N2  &kp N3     &kp N4      &kp N5       &kp N6     &kp N7    &kp N8     &kp N9                &kp N0
-&none     &none   &none      &none       &none        &none      &none     &none      &none                 &none
-                             &trans      &mo 5        &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans
             >;
         };
 
-        left_layer {
+        Mouse {
             bindings = <
-&none  &none          &kp C_VOL_UP               &none       &none   &none     &none     &none   &none      &none
-&none  &kp C_NEXT     &ht C_PLAY_PAUSE C_VOL_DN  &kp C_PREV  &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
-&none  &kp C_BRI_DEC  &kp C_BRI_INC              &none       &none   &none     &none     &none   &none      &none
-                                                 &trans      &trans  &mo 5     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans
             >;
         };
 
-        tri_layer {
+        Media {
             bindings = <
-&sys_reset    &none  &none  &none       &bt BT_SEL 0  &PS    &none           &none  &none  &sys_reset
-&bootloader   &none  &none  &none       &bt BT_SEL 1  &to 0  &to 1           &to 2  &none  &bootloader
-&out OUT_USB  &none  &none  &bt BT_CLR  &bt BT_SEL 2  &none  &none           &none  &none  &out OUT_BLE
-                            &none       &none         &none  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Num {
+            bindings = <
+&trans    &trans    &trans     &trans     &trans  &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp SEMI
+&none     &kp RALT  &none      &trans     &trans  &kp BSLH   &kp N1  &kp N2  &kp N3  &kp GRAVE
+                               &trans     &none   &kp MINUS  &kp N0
             >;
         };
     };
