@@ -24,10 +24,10 @@
 
         Nav {
             bindings = <
-  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
-  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans    &kp LALT  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
-                      &trans     &trans     &trans    &trans  &trans  &trans
+  &kp       &kp       &kp        &kp        &kp    &kp K_REDO    &kp K_PASTE     &kp K_COPY    &kp K_CUT       &kp K_UNDO
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp    &kp CAPSLOCK  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT
+  &kp       &kp LALT  &kp        &kp        &kp    &kp INS       &kp HOME        &kp PG_DN     &kp PG_UP       &kp END
+                      &kp        &kp        &kp    &kp           &kp             &kp
             >;
         };
 
@@ -35,7 +35,7 @@
             bindings = <
   &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &kp LALT  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+  &trans    &kp LALT  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
                       &trans     &trans     &trans    &trans  &trans  &trans
             >;
         };
@@ -44,35 +44,35 @@
             bindings = <
   &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans &kp LALT      &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  
+  &trans    &kp LALT  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
                       &trans     &trans     &trans    &trans  &trans  &trans
             >;
         };
 
         Numbers {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
-  &trans  &trans  &trans  &trans  &trans &trans    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &kp RALT    &trans
-                  &trans     &trans     &trans    &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans    &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &kp RALT  &trans
+                  &trans  &trans  &trans    &trans  &trans     &trans
             >;
         };
 
         Symbols {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
-  &trans  &trans  &trans  &trans  &trans  &trans   &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &kp RALT   &trans
-                  &trans     &trans     &trans    &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans    &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &kp RALT  &trans
+                  &trans  &trans  &trans    &trans  &trans     &trans
             >;
         };
 
         Fn {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans    &trans
-  &trans  &trans  &trans  &trans  &trans &trans    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  
-  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans      &kp RALT  &trans
-                  &trans     &trans     &trans    &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans    &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &kp RALT  &trans
+                  &trans  &trans  &trans    &trans  &trans     &trans
             >;
         };
     };
