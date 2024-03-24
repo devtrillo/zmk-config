@@ -74,7 +74,7 @@
         Mouse {
             bindings = <
        &sys_reset  &none     &none      &none      &none    &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO
-       &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp SPACE   &kp SPACE    &kp SPACE   &kp SPACE  &none
+       &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none   &none    &none   &none  &none
 &none  &none       &kp LALT  &none      &none      &none    &none       &none        &none       &none      &none       &none
                              &none      &none      &none    &none       &none        &none
             >;
@@ -84,9 +84,9 @@
 
         Media {
             bindings = <
-       &sys_reset  &none     &none      &none      &bt BT_SEL 0    &none       &none              &none            &none       &none
-       &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHFT  &none           &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none
-&none  &none       &kp LALT  &none      &none      &none           &none       &none              &none            &none       &none  &none
+                &sys_reset  &none     &none      &none      &bt BT_SEL 0    &none       &none              &none            &none       &none
+                &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHFT  &bt BT_SEL 1           &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none
+&bt BT_CLR_ALL  &none       &kp LALT  &none      &none      &bt BT_SEL 2           &none       &none              &none            &none       &none  &none
                              &none      &none      &none           &kp C_STOP  &kp C_PLAY         &kp K_MUTE
             >;
         };
