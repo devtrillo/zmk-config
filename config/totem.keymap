@@ -143,10 +143,10 @@
 
         Simbol {
             bindings = <
-           &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)     &none  &none      &none      &none     &none
-           &kp LS(COLON)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)     &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp LSHFT  &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)     &none  &none      &none      &kp LALT  &none     &kp LS(LC(LALT))
-                                        &kp LS(LPAR)   &kp LS(RPAR)   &kp LS(UNDER)    &none  &none      &none
+           &kp LEFT_BRACE  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)     &none  &none      &none      &none     &none
+           &kp LS(COLON)   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)     &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&kp LSHFT  &kp LS(TILDE)   &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)     &none  &none      &none      &kp LALT  &none     &kp LS(LC(LALT))
+                                         &kp LS(LPAR)   &kp LS(RPAR)   &kp LS(UNDER)    &none  &none      &none
             >;
 
             label = "SYM";
@@ -158,6 +158,15 @@
        &kp F11  &kp F4  &kp F5  &kp F6     &none      &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &none  &kp F10  &kp F1  &kp F2  &kp F3     &none      &none  &none      &none      &kp LALT  &none     &none
                         &none   &kp SPACE  &kp TAB    &none  &none      &none
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+        &kp Q  &kp W  &kp F   &kp P   &kp B     &kp J   &kp L   &kp U      &kp Y    &kp SEMI
+        &kp A  &kp R  &kp S   &kp T   &kp G     &kp M   &kp N   &kp E      &kp I    &kp O
+&trans  &kp Z  &kp X  &kp C   &kp D   &kp V     &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                      &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
