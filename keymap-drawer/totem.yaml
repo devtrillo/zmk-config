@@ -1,0 +1,319 @@
+layout: {qmk_keyboard: totem}
+layers:
+  base:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RALT}
+  - {t: \, h: RGUI}
+  - LA(LC(LEFT SHIFT))
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RA(RC(RG(RIGHT SHIFT)))
+  - {t: ESCAPE, h: Media}
+  - {t: SPACE, h: nav}
+  - {t: TAB, h: Mouse}
+  - {t: ENTER, h: Simbol}
+  - {t: BACKSPACE, h: Numbers}
+  - {t: DEL, h: Functions}
+  nav:
+  - ESC
+  - ''
+  - ''
+  - ''
+  - ''
+  - REDO
+  - PASTE
+  - COPY
+  - CUT
+  - UNDO
+  - LEFT GUI
+  - RIGHT ALT
+  - LCTRL
+  - LEFT SHIFT
+  - ''
+  - LEFT
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - INS
+  - HOME
+  - PAGE DOWN
+  - PG UP
+  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - ENTER
+  - BACKSPACE
+  - DELETE
+  Mouse:
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - REDO
+  - PASTE
+  - COPY
+  - CUT
+  - UNDO
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LALT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  Media:
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - {t: BT, h: '1'}
+  - PREV
+  - VOLUME DOWN
+  - VOLUME UP
+  - NEXT
+  - ''
+  - BT CLR ALL
+  - ''
+  - LALT
+  - ''
+  - ''
+  - {t: BT, h: '2'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - STOP
+  - PLAY
+  - MUTE
+  Numbers:
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - ']'
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&sys_reset'
+  - ;
+  - '4'
+  - '5'
+  - '6'
+  - '='
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - ''
+  - ''
+  - ''
+  - LALT
+  - ''
+  - ''
+  - .
+  - '0'
+  - '-'
+  - ''
+  - {type: held}
+  - ''
+  Simbol:
+  - '{'
+  - '&'
+  - '*'
+  - (
+  - '}'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ':'
+  - $
+  - '%'
+  - ^
+  - +
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - LSHFT
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - ''
+  - ''
+  - ''
+  - LALT
+  - ''
+  - LS(LC(LALT))
+  - (
+  - )
+  - _
+  - {type: held}
+  - ''
+  - ''
+  Functions:
+  - F12
+  - F7
+  - F8
+  - F9
+  - ''
+  - {t: BT, h: '0'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - F11
+  - F4
+  - F5
+  - F6
+  - ''
+  - {t: BT, h: '1'}
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - F10
+  - F1
+  - F2
+  - F3
+  - ''
+  - {t: BT, h: '2'}
+  - ''
+  - ''
+  - LALT
+  - ''
+  - BT CLR ALL
+  - ''
+  - SPACE
+  - TAB
+  - ''
+  - ''
+  - {type: held}
+  '7':
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - A
+  - R
+  - S
+  - T
+  - G
+  - M
+  - N
+  - E
+  - I
+  - O
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [0, 1]
+  k: ESC
+- p: [11, 12, 13]
+  k: {t: base, h: toggle}
